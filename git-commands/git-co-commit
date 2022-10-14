@@ -1,0 +1,29 @@
+#!/bin/sh
+
+case "$1" in
+  "--halp")
+    cat <<EOF
+Usage: git co-commit --halp
+Usage: git co-commit [--person] ...
+
+EOF
+    exit 1
+    ;;
+  "--john")
+    coauthor="John Idso<john.idso@target.com>"
+    ;;
+  *)
+    echo "Please specify --person!"
+    exit 1
+esac
+
+shift # ditch $1
+
+git_path="$(git rev-parse --show-toplevel)/.git"
+commit_template_path="$git_path/coauthor-commit-template"
+
+echo -n "\n\nCo-authored-by: $coauthor\n" > "$commit_template_path"
+
+git config commit.template $commit_template_path
+git commit $@
+git config --unset commit.template
