@@ -1,0 +1,10 @@
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  kubectl
+  zsh-history-substring-search
+  shrink-path
+  kubectl
+  batect
+)

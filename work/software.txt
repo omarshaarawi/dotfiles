@@ -1,0 +1,10 @@
+fig
+sdkman
+insomnia 
+alfred 
+intellij
+rectangle pro
+guidance
+pgadmin
+1password
+
