@@ -1,0 +1,10 @@
+1password-cli
+adoptopenjdk8
+font-hack-nerd-font
+insomnia
+karabiner-elements
+micronaut
+minikube
+monitorcontrol
+rectangle
+tuntap
